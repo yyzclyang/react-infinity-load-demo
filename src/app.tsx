@@ -97,9 +97,9 @@ const App = () => {
       }, 0);
     });
     setHadDisplayBoxMaxIndex((preMaxIndex) =>
-      preMaxIndex >= displayBoxStartIndex + 9
-        ? preMaxIndex
-        : displayBoxStartIndex + 9
+      preMaxIndex < displayBoxStartIndex + 10
+        ? displayBoxStartIndex + 10
+        : preMaxIndex
     );
   }, [displayBoxStartIndex, boxHeightArr, boxData]);
   React.useEffect(() => {
